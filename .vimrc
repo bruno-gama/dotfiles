@@ -24,6 +24,8 @@ filetype plugin indent on    " required
 syntax enable
 set background=dark
 
+set mouse=a " use mouse
+
 " NERDTree options
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
