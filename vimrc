@@ -52,6 +52,7 @@ let g:prettier#config#single_quote = 'true'
 let g:prettier#config#trailing_comma = 'es5'
 let g:prettier#config#parser = 'flow'
 let g:prettier#config#config_precedence = 'prefer-file'
+let g:prettier#config#bracket_spacing = 'true'
 
 " Following settings have been stolen from the CampusCode dotfiles
 " (https://github.com/campuscode/cc_dotfiles/blob/master/vimrc')
