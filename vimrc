@@ -27,12 +27,31 @@ set background=dark
 
 set mouse=a " use mouse
 
+" change caret to cursor in insert mode
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
+" reset cursor on start:
+augroup myCmds
+  au!
+  autocmd VimEnter * silent !echo -ne "\e[2 q"
+augroup END
+
 " NERDTree options
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
 " CtrlP options
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard'] " ignore files included in .gitignore
+
+" vim-prettier options
+let g:prettier#config#print_width = 80
+let g:prettier#config#tab_width = 2
+let g:prettier#config#semi = 'false'
+let g:prettier#config#single_quote = 'true'
+let g:prettier#config#trailing_comma = 'es5'
+let g:prettier#config#parser = 'flow'
+let g:prettier#config#config_precedence = 'prefer-file'
 
 " Following settings have been stolen from the CampusCode dotfiles
 " (https://github.com/campuscode/cc_dotfiles/blob/master/vimrc')

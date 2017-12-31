@@ -18,4 +18,3 @@ professional projects, either on MacOS or Linux.
 * add .bashrc
 * add configs for sublime
 * add configs for fish
-* add patched hasklig font to use with powerline
