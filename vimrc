@@ -13,6 +13,10 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'prettier/vim-prettier'
 Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'chrisbra/color_highlight'
+Plugin 'drewtempelmeyer/palenight.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -22,8 +26,12 @@ filetype plugin indent on    " required
 
 " Put your non-Plugin stuff after this line
 
+set shell=/bin/bash
+
 syntax enable
-set background=dark
+colorscheme palenight
+hi Normal ctermbg=none
+:let g:colorizer_auto_filetype='css,html' "hex color strings highlighter
 
 set mouse=a " use mouse
 
@@ -53,6 +61,10 @@ let g:prettier#config#trailing_comma = 'es5'
 let g:prettier#config#parser = 'flow'
 let g:prettier#config#config_precedence = 'prefer-file'
 let g:prettier#config#bracket_spacing = 'true'
+let g:prettier#config#jsx_bracket_same_line = 'false'
+
+" JSX in .js files
+let g:jsx_ext_required = 0
 
 " Following settings have been stolen from the CampusCode dotfiles
 " (https://github.com/campuscode/cc_dotfiles/blob/master/vimrc')
@@ -62,7 +74,7 @@ let mapleader = " "
 set backspace=2   " Backspace deletes like most programs in insert mode
 set nobackup
 set nowritebackup
-set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
+set noswapfile    " Swapfiles cause me more bad than good
 set history=1000  " a lot of history
 set ruler         " show the cursor position all the time
 set hlsearch
@@ -110,3 +122,12 @@ let g:html_indent_tags = 'li\|p'
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright
+
+" ================ Persistent Undo ==================
+" Keep undo history across sessions, by storing in file.
+" Only works all the time.
+if has('persistent_undo')
+  silent !mkdir ~/.vim/backups > /dev/null 2>&1
+  set undodir=~/.vim/backups
+  set undofile
+endif
