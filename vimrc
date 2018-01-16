@@ -18,6 +18,7 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'chrisbra/color_highlight'
 Plugin 'drewtempelmeyer/palenight.vim'
 Plugin 'valloric/youcompleteme'
+Plugin 'elmcast/elm-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -63,6 +64,11 @@ let g:prettier#config#parser = 'flow'
 let g:prettier#config#config_precedence = 'prefer-file'
 let g:prettier#config#bracket_spacing = 'true'
 let g:prettier#config#jsx_bracket_same_line = 'false'
+
+" YouCompleteMe options
+let g:ycm_semantic_triggers = {
+     \ 'elm' : ['.'],
+     \}
 
 " JSX in .js files
 let g:jsx_ext_required = 0
