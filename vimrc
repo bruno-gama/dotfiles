@@ -19,6 +19,7 @@ Plugin 'chrisbra/color_highlight'
 Plugin 'drewtempelmeyer/palenight.vim'
 Plugin 'valloric/youcompleteme'
 Plugin 'elmcast/elm-vim'
+Plugin 'wakatime/vim-wakatime'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
