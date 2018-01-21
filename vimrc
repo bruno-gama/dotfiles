@@ -20,6 +20,10 @@ Plugin 'drewtempelmeyer/palenight.vim'
 Plugin 'valloric/youcompleteme'
 Plugin 'elmcast/elm-vim'
 Plugin 'wakatime/vim-wakatime'
+Plugin 'w0rp/ale'
+Plugin 'reasonml-editor/vim-reason-plus'
+Plugin 'autozimu/languageclient-neovim'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -66,10 +70,22 @@ let g:prettier#config#config_precedence = 'prefer-file'
 let g:prettier#config#bracket_spacing = 'true'
 let g:prettier#config#jsx_bracket_same_line = 'false'
 
+" ALE options
+let g:ale_fixers = {
+\  'javascript': ['eslint'],
+\}
+
+
 " YouCompleteMe options
 let g:ycm_semantic_triggers = {
-     \ 'elm' : ['.'],
-     \}
+\  'elm' : ['.'],
+\}
+
+" LanguageClient options
+let g:LanguageClient_serverCommands = {
+\  'reason': ['ocaml-language-server', '--stdio'],
+\  'ocaml': ['ocaml-language-server', '--stdio'],
+\}
 
 " JSX in .js files
 let g:jsx_ext_required = 0
