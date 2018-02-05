@@ -23,6 +23,7 @@ Plugin 'wakatime/vim-wakatime'
 Plugin 'w0rp/ale'
 Plugin 'reasonml-editor/vim-reason-plus'
 Plugin 'autozimu/languageclient-neovim'
+Plugin 'cakebaker/scss-syntax.vim'
 
 
 " All of your Plugins must be added before the following line
