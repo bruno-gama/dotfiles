@@ -23,6 +23,7 @@ Plugin 'wakatime/vim-wakatime'
 Plugin 'w0rp/ale'
 Plugin 'reasonml-editor/vim-reason-plus'
 Plugin 'autozimu/languageclient-neovim'
+Plugin 'tomtom/tcomment_vim'
 
 
 " All of your Plugins must be added before the following line
@@ -72,7 +73,7 @@ let g:prettier#config#jsx_bracket_same_line = 'false'
 
 " ALE options
 let g:ale_fixers = {
-\  'javascript': ['eslint'],
+\  'javascript': ['prettier', 'eslint'],
 \}
 
 " ALE options
