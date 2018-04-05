@@ -76,6 +76,12 @@ let g:ale_fixers = {
 \  'javascript': ['prettier', 'eslint'],
 \}
 
+" ALE options
+let g:ale_linters = {
+\  'javascript': ['eslint'],
+\}
+
+let g:ale_javascript_prettier_use_local_config = 1
 
 " YouCompleteMe options
 let g:ycm_semantic_triggers = {
