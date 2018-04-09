@@ -4,6 +4,9 @@
 # increase history size
 #set -g history-limit 10000
 
+# use zsh
+set-option -g default-shell /bin/zsh
+
 # start with mouse mode enabled
 set -g mouse on
 
