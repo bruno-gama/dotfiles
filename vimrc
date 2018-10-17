@@ -89,6 +89,8 @@ let g:ycm_semantic_triggers = {
 \  'elm' : ['.'],
 \}
 
+let g:ycm_show_diagnostics_ui = 0
+
 " LanguageClient options
 let g:LanguageClient_serverCommands = {
 \  'reason': ['ocaml-language-server', '--stdio'],
