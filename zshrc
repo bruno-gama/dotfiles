@@ -28,6 +28,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias pbcopy='xclip -selection clip'
 alias pbpaste='xclip -selection clip -o'
+alias vn='variety --next'
 
 # Tmux on startup
 [ -z "$TMUX"  ] && { tmux attach || tmux new -s sambarilove;}
