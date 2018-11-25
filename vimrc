@@ -14,6 +14,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'prettier/vim-prettier'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'posva/vim-vue'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'chrisbra/color_highlight'
 Plugin 'drewtempelmeyer/palenight.vim'
@@ -26,6 +27,7 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'ahw/vim-pbcopy'
 Plugin 'styled-components/vim-styled-components'
 Plugin 'jparise/vim-graphql'
+Plugin 'luochen1990/rainbow'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -40,7 +42,8 @@ set shell=/bin/bash
 syntax enable
 colorscheme palenight
 hi Normal ctermbg=none
-:let g:colorizer_auto_filetype='css,html' "hex color strings highlighter
+let g:colorizer_auto_filetype='css,html' "hex color strings highlighter
+let g:rainbow_active = 1 "rainbow brackets
 
 set mouse=a " use mouse
 
