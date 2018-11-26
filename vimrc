@@ -123,6 +123,8 @@ set smartcase     " ...unless we type a capital
 set showmode      "Show current mode down the bottom
 set visualbell    " No noise
 set nowrap        "Don't wrap lines
+inoremap kj <Esc>
+inoremap jk <Esc>
 
 " Softtabs, 2 spaces
 set tabstop=2
