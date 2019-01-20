@@ -30,7 +30,21 @@ alias pbcopy='xclip -selection clip'
 alias pbpaste='xclip -selection clip -o'
 alias vn='variety --next'
 
-# Tmux on startup
+# aliases for quickly opening project urls
+  alias f-es-stg='firefox --new-tab http://k8s-staging-es-front.focobrasil.com.br'
+  alias f-es-prod='firefox --new-tab http://www.educacaoemfoco.sedu.es.gov.br/login'
+  alias f-ms-stg='firefox --new-tab http://k8s-staging-ms-front.focobrasil.com.br'
+  alias f-ms-prod='firefox --new-tab http://www.foconoestudante.com.br'
+  alias f-pa-stg='firefox --new-tab http://k8s-staging-pa-front.focobrasil.com.br'
+  alias f-pa-prod='firefox --new-tab http://www.focopedagogico.com.br'
+  alias f-pb-stg='firefox --new-tab http://k8s-staging-pb-front.focobrasil.com.br'
+  alias f-pb-prod='firefox --new-tab http://www.aprendizagememfoco.com.br'
+  alias f-pe-stg='firefox --new-tab http://k8s-staging-pe-front.focobrasil.com.br'
+  alias f-pe-prod='firefox --new-tab http://www.focoeducacaope.com.br/login'
+  alias f-pi-stg='firefox --new-tab http://k8s-staging-pi-front.focobrasil.com.br'
+  alias f-pi-prod='firefox --new-tab http://www.focoaprendizagempi.com.br'
+
+# Tmux on startupes
 [ -z "$TMUX"  ] && { tmux attach || tmux new -s sambarilove;}
 
 # Load NVM
