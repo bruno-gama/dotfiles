@@ -86,6 +86,7 @@ let g:ale_linters = {
 \}
 
 let g:ale_javascript_prettier_use_local_config = 1
+let g:ale_lint_on_text_changed = 'never'
 
 " YouCompleteMe options
 let g:ycm_semantic_triggers = {
