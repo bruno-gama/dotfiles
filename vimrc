@@ -126,6 +126,7 @@ set visualbell    " No noise
 set nowrap        "Don't wrap lines
 inoremap kj <Esc>
 inoremap jk <Esc>
+nnoremap <leader>l :ALELint<CR>
 
 " Softtabs, 2 spaces
 set tabstop=2
