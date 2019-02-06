@@ -27,7 +27,7 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'ahw/vim-pbcopy'
 Plugin 'styled-components/vim-styled-components'
 Plugin 'jparise/vim-graphql'
-Plugin 'luochen1990/rainbow'
+Plugin 'mileszs/ack.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -43,7 +43,6 @@ syntax enable
 colorscheme palenight
 hi Normal ctermbg=none
 let g:colorizer_auto_filetype='css,html' "hex color strings highlighter
-let g:rainbow_active = 1 "rainbow brackets
 
 set mouse=a " use mouse
 
@@ -103,6 +102,11 @@ let g:LanguageClient_serverCommands = {
 
 " JSX in .js files
 let g:jsx_ext_required = 0
+
+" Ack options
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 " Following settings have been stolen from the CampusCode dotfiles
 " (https://github.com/campuscode/cc_dotfiles/blob/master/vimrc')
