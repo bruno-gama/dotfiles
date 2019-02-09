@@ -161,3 +161,4 @@ hide_edge_borders both
 # Auto open applications on startup
 exec gnome-terminal --full-screen
 exec variety
+exec compton -b --config ~/.config/compton/compton.conf
