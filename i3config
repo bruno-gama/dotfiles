@@ -157,3 +157,6 @@ bar {
 
 # Configure default borders
 hide_edge_borders both
+
+# Auto open applications on startup
+exec i3-sensible-terminal
