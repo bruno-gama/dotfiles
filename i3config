@@ -172,6 +172,14 @@ bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
 bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
 bindsym XF86AudioMute exec amixer -q set Master toggle && amixer -q set Speaker unmute
 
+# Customize client colors
+# class                 border  bground text    indicator child_border
+client.focused          $base02 $base02 $base2  $cyan     $blue
+client.focused_inactive $base03 $base03 $base2  $cyan     $blue
+client.unfocused        $base03 $base03 $base01 $cyan     $blue
+client.urgent           $orange $orange $base3  $red      $red
+client.placeholder      $base03 $base03 $base01 $cyan     $blue
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
@@ -186,7 +194,7 @@ bar {
     focused_workspace $base1 $base1 $base2
     active_workspace $base02 $base02 $base2
     inactive_workspace $base02 $base02 $base00
-    urgent_workspace $orange $orange $base2
+    urgent_workspace $orange $orange $base3
     binding_mode $orange $orange $base2
   }
 }
