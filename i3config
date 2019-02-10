@@ -169,6 +169,10 @@ bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
 bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
 bindsym XF86AudioMute exec amixer -q set Master toggle && amixer -q set Speaker unmute
 
+# Brightness control softkeys
+bindsym XF86MonBrightnessUp exec brightlight -i 20
+bindsym XF86MonBrightnessDown exec brightlight -d 20
+
 # Customize client colors
 # class                 border  bground text    indicator child_border
 client.focused          $base02 $base02 $base2  $cyan     $blue
