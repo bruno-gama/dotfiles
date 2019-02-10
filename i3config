@@ -47,7 +47,7 @@ set $green #859900
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal --full-screen
+bindsym $mod+Return exec gnome-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -224,3 +224,8 @@ mode "$mode_power" {
   bindsym Escape mode "default"
 }
 bindsym $mod+p mode "$mode_power"
+
+# Rules/exceptions for specific windows
+
+# 1. Hide titlebar for terminal
+for_window [class="Gnome-terminal"] border pixel 1
