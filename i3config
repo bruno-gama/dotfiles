@@ -167,7 +167,9 @@ bindsym $mod+r mode "resize"
 # Volume control softkeys
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
 bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
-bindsym XF86AudioMute exec amixer -q set Master toggle && amixer -q set Speaker unmute
+bindsym XF86AudioMute exec amixer -q set Master toggle \
+  && amixer -q set Speaker unmute\
+  && amixer -q set Headphone unmute
 
 # Brightness control softkeys
 bindsym XF86MonBrightnessUp exec brightlight -i 20
