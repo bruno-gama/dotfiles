@@ -11,7 +11,6 @@ order += "disk /"
 order += "wireless _first_"
 order += "ethernet _first_"
 order += "battery all"
-order += "load"
 order += "tztime local"
 
 wireless _first_ {
@@ -39,12 +38,4 @@ battery all {
 
 tztime local {
         format = "%Y-%m-%d %H:%M:%S"
-}
-
-load {
-        format = "%5min"
-}
-
-disk "/" {
-        format = "%free"
 }
