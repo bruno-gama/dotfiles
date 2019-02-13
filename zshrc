@@ -29,6 +29,8 @@ source $ZSH/oh-my-zsh.sh
 alias pbcopy='xclip -selection clip'
 alias pbpaste='xclip -selection clip -o'
 alias vn='variety --next'
+alias :q='exit' # I'm tired of this
+alias :wq='exit' # and this too
 
 function dcr() {
   docker-compose run --rm --service-ports $1 $2
