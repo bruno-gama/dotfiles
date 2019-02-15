@@ -38,3 +38,8 @@ brightlight installed:
   * clone the [brightlight repo](https://github.com/multiplexd/brightlight)
   * compile from source (run `make`)
   * install to bin folder with setuid root
+
+The I3 configuration takes the following packages for granted, so you should
+install them with your package manager:
+
+  * `xss-lock`

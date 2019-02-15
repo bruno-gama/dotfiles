@@ -209,15 +209,15 @@ hide_edge_borders both
 exec gnome-terminal
 exec variety
 exec compton -b --config ~/.config/compton/compton.conf
+exec --no-startup-id xss-lock i3lock # Automatically lock on suspend/screensaver
 
 # "Power" mode - handles logout, suspend, shutdown etc
-set $Locker i3lock && sleep 1
 set $mode_power Power (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_power" {
-  bindsym l exec --no-startup-id $Locker, mode "default"
+  bindsym l exec --no-startup-id i3lock, mode "default"
   bindsym e exec --no-startup-id i3-msg exit, mode "default"
-  bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
-  bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
+  bindsym s exec --no-startup-id systemctl suspend, mode "default"
+  bindsym h exec --no-startup-id systemctl hibernate, mode "default"
   bindsym r exec --no-startup-id systemctl reboot, mode "default"
   bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
 
@@ -228,7 +228,6 @@ mode "$mode_power" {
 bindsym $mod+p mode "$mode_power"
 
 # "Screenshot" mode - handles logout, suspend, shutdown etc
-set $Locker i3lock && sleep 1
 set $mode_screenshot Capture - Screen (s) Window (w) Area (a)
 mode "$mode_screenshot" {
   bindsym s exec --no-startup-id io.elementary.screenshot-tool -s, mode "default"
