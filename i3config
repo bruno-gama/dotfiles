@@ -166,7 +166,7 @@ hide_edge_borders both
 exec gnome-terminal # I like having a terminal always open
 exec variety # Cycles through wallpapers
 exec compton -b --config ~/.config/compton/compton.conf # Enables window composition (opacity, transitions etc)
-exec --no-startup-id xss-lock i3lock # Automatically lock on suspend/screensaver
+exec --no-startup-id xss-lock ~/.config/i3/i3lock.sh # Automatically lock on suspend/screensaver
 
 # "Resize" mode resizes windows
 set $mode_resize Resize - hjkl or arrow keys to resize
@@ -190,7 +190,7 @@ bindsym $mod+r mode "$mode_resize"
 # "Power" mode - handles logout, suspend, shutdown etc
 set $mode_power Power (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_power" {
-  bindsym l exec --no-startup-id i3lock, mode "default"
+  bindsym l exec --no-startup-id ~/.config/i3/i3lock.sh, mode "default"
   bindsym e exec --no-startup-id i3-msg exit, mode "default"
   bindsym s exec --no-startup-id systemctl suspend, mode "default"
   bindsym h exec --no-startup-id systemctl hibernate, mode "default"
