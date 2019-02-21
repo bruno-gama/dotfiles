@@ -43,3 +43,4 @@ The I3 configuration takes the following packages for granted, so you should
 install them with your package manager:
 
   * `xss-lock`
+  * `playerctl`
