@@ -28,6 +28,7 @@ Plugin 'ahw/vim-pbcopy'
 Plugin 'styled-components/vim-styled-components'
 Plugin 'jparise/vim-graphql'
 Plugin 'mileszs/ack.vim'
+Plugin 'tpope/vim-fugitive'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
