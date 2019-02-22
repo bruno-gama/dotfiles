@@ -26,8 +26,6 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-alias pbcopy='xclip -selection clip'
-alias pbpaste='xclip -selection clip -o'
 alias vn='variety --next'
 alias :q='exit' # I'm tired of this
 alias :wq='exit' # and this too
