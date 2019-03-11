@@ -25,10 +25,10 @@ Plugin 'w0rp/ale'
 Plugin 'reasonml-editor/vim-reason-plus'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'christoomey/vim-system-copy'
+Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'styled-components/vim-styled-components'
 Plugin 'jparise/vim-graphql'
 Plugin 'mileszs/ack.vim'
-Plugin 'tpope/vim-fugitive'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
