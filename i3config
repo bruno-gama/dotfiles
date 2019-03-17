@@ -164,6 +164,7 @@ hide_edge_borders both
 # Auto open applications on startup
 exec gnome-terminal # I like having a terminal always open
 exec variety # Cycles through wallpapers
+exec --no-startup-id SpiderOakONE # SpiderOak ONE
 exec compton -b --config ~/.config/compton/compton.conf # Enables window composition (opacity, transitions etc)
 exec --no-startup-id xss-lock ~/.config/i3/i3lock.sh # Automatically lock on suspend/screensaver
 
