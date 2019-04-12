@@ -26,6 +26,7 @@ Plugin 'reasonml-editor/vim-reason-plus'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'christoomey/vim-system-copy'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'christoomey/vim-tmux-runner'
 Plugin 'styled-components/vim-styled-components'
 Plugin 'jparise/vim-graphql'
 Plugin 'mileszs/ack.vim'
@@ -111,7 +112,14 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
+" Vim-tmux-runner options
+let g:VtrPrompt = '👉 '
+nnoremap <Space>o :VtrOpenRunner<CR>
+nnoremap <Space>x :VtrKillRunner<CR>
+nnoremap <Space>r :VtrSendCommandToRunner<Space>
+
 " Vim-test options
+let test#strategy = 'vtr'
 let test#enabled_runners = ['ruby#rspec', 'javascript#jest']
 let test#javascript#jest#executable = 'yarn test'
 
@@ -145,6 +153,7 @@ inoremap kj <Esc>
 inoremap jk <Esc>
 nnoremap <leader>l :ALELint<CR>
 nnoremap <leader>a :Ack!<Space>
+nnoremap <Space>f :VtrSendCommandToRunner yarn flow<CR>
 
 " Softtabs, 2 spaces
 set tabstop=2
