@@ -123,11 +123,11 @@ let test#strategy = 'vtr'
 let test#enabled_runners = ['ruby#rspec', 'javascript#jest']
 let test#javascript#jest#executable = 'yarn test'
 
-nmap <silent> t<C-n> :TestNearest<CR>
-nmap <silent> t<C-f> :TestFile<CR>
-nmap <silent> t<C-s> :TestSuite<CR>
-nmap <silent> t<C-l> :TestLast<CR>
-nmap <silent> t<C-g> :TestVisit<CR>
+nnoremap <Space>tn :TestNearest<CR>
+nnoremap <Space>tf :TestFile<CR>
+nnoremap <Space>ts :TestSuite<CR>
+nnoremap <Space>tl :TestLast<CR>
+nnoremap <Space>tg :TestVisit<CR>
 
 " Following settings have been stolen from the CampusCode dotfiles
 " (https://github.com/campuscode/cc_dotfiles/blob/master/vimrc')
