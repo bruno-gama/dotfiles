@@ -188,13 +188,13 @@ mode "$mode_resize" {
 bindsym $mod+r mode "$mode_resize"
 
 # "Power" mode - handles logout, suspend, shutdown etc
-set $mode_power Power (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+set $mode_power Power (l) lock, (e) logout, (s) suspend, (h) hibernate, (Shift+r) reboot, (Shift+s) shutdown
 mode "$mode_power" {
   bindsym l exec --no-startup-id ~/.config/i3/i3lock.sh, mode "default"
   bindsym e exec --no-startup-id i3-msg exit, mode "default"
   bindsym s exec --no-startup-id systemctl suspend, mode "default"
   bindsym h exec --no-startup-id systemctl hibernate, mode "default"
-  bindsym r exec --no-startup-id systemctl reboot, mode "default"
+  bindsym Shift+R exec --no-startup-id systemctl reboot, mode "default"
   bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
 
   # back to normal: Enter or Escape
