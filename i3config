@@ -204,11 +204,11 @@ mode "$mode_power" {
 bindsym $mod+p mode "$mode_power"
 
 # "Screenshot" mode - handles logout, suspend, shutdown etc
-set $mode_screenshot Capture - Screen (s) Window (w) Area (a)
+set $mode_screenshot Capture - Screen (s) Full (f) Area (a)
 mode "$mode_screenshot" {
-  bindsym s exec --no-startup-id io.elementary.screenshot-tool -s, mode "default"
-  bindsym w exec --no-startup-id io.elementary.screenshot-tool -w, mode "default"
-  bindsym a exec --no-startup-id io.elementary.screenshot-tool -r, mode "default"
+  bindsym s exec --no-startup-id flameshot screen -p "$HOME/Pictures/screenies", mode "default"
+  bindsym f exec --no-startup-id flameshot full -p "$HOME/Pictures/screenies", mode "default"
+  bindsym a exec --no-startup-id flameshot gui -p "$HOME/Pictures/screenies", mode "default"
 
   # back to normal: Enter or Escape
   bindsym Return mode "default"
