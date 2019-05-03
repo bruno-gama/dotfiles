@@ -83,6 +83,21 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+# assigning default workspace monitors
+set $monitor_one "eDP-1"
+set $monitor_two "HDMI-1"
+
+workspace 1 output $monitor_one
+workspace 2 output $monitor_one
+workspace 3 output $monitor_one
+workspace 4 output $monitor_one
+workspace 5 output $monitor_one
+workspace 6 output $monitor_two
+workspace 7 output $monitor_two
+workspace 8 output $monitor_two
+workspace 9 output $monitor_two
+workspace 10 output $monitor_two
+
 # switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
@@ -215,6 +230,18 @@ mode "$mode_screenshot" {
   bindsym Escape mode "default"
 }
 bindsym Print mode "$mode_screenshot"
+
+# "Configure monitors" mode - selects display position presets
+set $mode_display Monitor layout - Work (w) Laptop (l)
+mode "$mode_display" {
+  bindsym w exec "sh ~/.screenlayouts/work.sh", mode "default"
+  bindsym l exec "sh ~/.screenlayouts/laptop.sh", mode "default"
+
+  # back to normal: Enter or Escape
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+bindsym $mod+m mode "$mode_display"
 
 # Rules/exceptions for specific windows
 
