@@ -243,6 +243,18 @@ mode "$mode_display" {
 }
 bindsym $mod+m mode "$mode_display"
 
+# "Configure keyboard" mode - selects keyboard layout
+set $mode_keyboard Keyboard layout - International (i) BR (b)
+mode "$mode_keyboard" {
+  bindsym i exec --no-startup-id "setxkbmap -model pc104 -layout us_intl -variant intl", mode "default"
+  bindsym b exec --no-startup-id "setxkbmap -model abnt2 -layout br -variant abnt2", mode "default"
+
+  # back to normal: Enter or Escape
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+bindsym $mod+t mode "$mode_keyboard"
+
 # Rules/exceptions for specific windows
 
 # 1. Hide titlebar for terminal
