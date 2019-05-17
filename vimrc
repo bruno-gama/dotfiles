@@ -41,7 +41,6 @@ filetype plugin indent on    " required
 
 " Put your non-Plugin stuff after this line
 
-set shell=/bin/bash
 
 syntax enable
 colorscheme palenight
