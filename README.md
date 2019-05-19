@@ -45,3 +45,4 @@ install them with your package manager:
   * `xss-lock`
   * `playerctl`
   * `flameshot`
+  * `caffeine`
