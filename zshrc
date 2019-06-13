@@ -34,6 +34,10 @@ function dcr() {
   docker-compose run --rm --service-ports $1 $2
 }
 
+function megareplace() {
+  ag -rl $1 $3 | xargs sed -i -E s/$1/$2/g
+}
+
 # aliases for quickly opening project urls
 alias f-es-stg='firefox --new-tab http://k8s-staging-es-front.focobrasil.com.br'
 alias f-es-prod='firefox --new-tab http://www.educacaoemfoco.sedu.es.gov.br/login'
