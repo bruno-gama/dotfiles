@@ -148,6 +148,7 @@ set smartcase     " ...unless we type a capital
 set showmode      "Show current mode down the bottom
 set visualbell    " No noise
 set nowrap        "Don't wrap lines
+set nomodeline    "Don't get hacked'
 inoremap kj <Esc>
 inoremap jk <Esc>
 nnoremap <leader>l :ALELint<CR>
