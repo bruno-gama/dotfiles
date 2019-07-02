@@ -52,6 +52,9 @@ alias f-pe-prod='firefox --new-tab http://www.focoeducacaope.com.br/login'
 alias f-pi-stg='firefox --new-tab http://k8s-staging-pi-front.focobrasil.com.br'
 alias f-pi-prod='firefox --new-tab http://www.focoaprendizagempi.com.br'
 
+# set readline mode to vim
+set -o vi
+
 # This thing is here mostly to prevent vim from hanging when I press C-s
 # more info: https://unix.stackexchange.com/a/72092
 stty -ixon
