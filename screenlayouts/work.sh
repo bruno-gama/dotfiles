@@ -9,4 +9,3 @@ xrandr --output HDMI-1 \
        --mode 1366x768 \
        --pos 266x1080 \
        --rotate normal
-
