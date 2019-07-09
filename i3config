@@ -37,7 +37,7 @@ bindsym $mod+Shift+q kill
 # Bind dmenu-desktop instead of dmenu
 # Also apply theme
 bindsym $mod+d exec --no-startup-id \
-"i3-dmenu-desktop --dmenu='dmenu -i -nf \$base2 -nb \$base02 -sb \$cyan -sf \$base3 -fn monospace-10 -p 👉'"
+"i3-dmenu-desktop --dmenu='dmenu -i -nf \$base2 -nb \$base02 -sb \$cyan -sf \$base3 -fn monospace-10 -p Vrau!'"
 
 # change focus
 bindsym $mod+h focus left
