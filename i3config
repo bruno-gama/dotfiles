@@ -260,6 +260,5 @@ bindsym $mod+t mode "$mode_keyboard"
 
 # Rules/exceptions for specific windows
 
-# 1. Hide titlebar for terminal
-for_window [class="Gnome-terminal"] border pixel 1
-for_window [class="Firefox"] border pixel 1
+# 1. Hide titlebar for everything
+for_window [class="^.*"] border pixel 1
