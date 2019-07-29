@@ -1,6 +1,8 @@
-#!/bin/sh
-# shell script to prepend i3status with more info
-# for now I'm just listing unread email
+#!/bin/bash
+# Shell script to prepend i3status with more info
+# Things this script adds:
+# 1. Number of unread emails
+# 2. Current song being played (uses playerctl)
 
 i3status | while :
 do
@@ -8,7 +10,19 @@ do
   read line
 
   # Get number of unread mail in Mail INBOX folders
-  unread="✉️ $(find ~/Mail/*/INBOX/new/* | wc -l)"
+  unread="✉️ $(find ~/Mail/*/INBOX/new/* | wc -l) |"
 
-  echo "$unread | $line" || exit 1
+  # Get song name and artist if player is open
+  playermessage=""
+  playerstatus="$(playerctl status)"
+  # Only if player is open
+  if [ "$playerstatus" = "Paused" ] || [ "$playerstatus" = "Playing" ]; then
+    # Grab artist and song name from metadata
+    artist=$(playerctl metadata | grep xesam:artist | sed -e "s/^\w\+\s\+\+\w\+:\w\+\s\+//g")
+    song=$(playerctl metadata | grep xesam:title | sed -e "s/^\w\+\s\+\+\w\+:\w\+\s\+//g")
+    # Format final output
+    playermessage="$playerstatus: $artist - $song |"
+  fi
+
+  echo "$playermessage $unread $line" || exit 1
 done
