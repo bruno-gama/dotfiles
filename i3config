@@ -262,3 +262,7 @@ bindsym $mod+t mode "$mode_keyboard"
 
 # 1. Hide titlebar for everything
 for_window [class="^.*"] border pixel 1
+
+# Configure other system things
+
+exec "rmmod pcspkr"
