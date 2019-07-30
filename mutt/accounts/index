@@ -1,6 +1,7 @@
 # Edit this file and add one hook per account you want to use
 
 # Initially use configuration for the "default" account
+set spoolfile   = "+Example/INBOX"
 source ~/.mutt/accounts/Example
 
 # Change configuration depending on current folder
