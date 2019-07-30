@@ -1,0 +1,14 @@
+set from      = "example@email.com"
+set sendmail  = "/usr/bin/msmtp -a example"
+set mbox      = "+Example/archive"
+set postponed = "+Example/drafts"
+
+color status green default
+
+macro index D \
+    "<save-message>+Example/Trash<enter>" \
+    "move message to the trash"
+
+macro index S \
+    "<save-message>+Example/Junk Mail<enter>"  \
+    "mark message as spam"

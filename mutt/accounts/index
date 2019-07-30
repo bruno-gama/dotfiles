@@ -1,0 +1,8 @@
+# Edit this file and add one hook per account you want to use
+
+# Initially use configuration for the "default" account
+source ~/.mutt/accounts/Example
+
+# Change configuration depending on current folder
+folder-hook Example/* source ~/.mutt/accounts/example
+folder-hook Example2/* source ~/.mutt/accounts/example2

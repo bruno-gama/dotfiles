@@ -13,6 +13,8 @@ professional projects, either on MacOS or Linux.
 * .config/i3status/config
 * .config/compton/compton.conf
 * .xprofile
+* .mutt/muttrc
+* .mailcap
 
 ## Requirements
 
@@ -46,3 +48,11 @@ install them with your package manager:
   * `playerctl`
   * `flameshot`
   * `caffeine`
+
+## Mutt email extra setup
+
+Copy the contents of the `mutt` folder to `~/.mutt`, `muttrc` can be a symlink,
+but the other files will need to be edited.
+
+* `mutt/accounts/example` is a template for creating a config file for each email account you want to configure
+* `mutt/accounts/index` is the file that handles changing configuration depending on current folder
