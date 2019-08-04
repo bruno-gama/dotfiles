@@ -3,7 +3,6 @@
 
 set mbox_type   = Maildir
 set folder      = ~/Mail
-unset record
 
 # Multiple account configuration
 source ~/.mutt/accounts/index

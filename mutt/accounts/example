@@ -2,6 +2,7 @@ set from      = "example@email.com"
 set sendmail  = "/usr/bin/msmtp -a example"
 set mbox      = "+Example/archive"
 set postponed = "+Example/drafts"
+set record    = "+Example/sent"
 
 color status green default
 
