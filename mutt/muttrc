@@ -39,6 +39,7 @@ unset mime_forward
 set forward_format = "Fwd: %s"
 set include
 set forward_quote
+set editor="vim"
 
 ignore *                               # first, ignore all headers
 unignore from: to: cc: date: subject:  # then, show only these
