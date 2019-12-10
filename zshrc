@@ -38,6 +38,17 @@ function megareplace() {
   ag -rl $1 $3 | xargs sed -i -E s/$1/$2/g
 }
 
+function cubo() {
+  ID=`nmcli -t --fields uuid,device connection show --active |\
+      grep wlan0 |\
+      awk -F ':' '{print $1}'`
+  echo "Active connection UUID is $ID"
+  echo "Deactivating connection..."
+  nmcli connection down $ID
+  echo "Reactivating connection..."
+  nmcli connection up $ID
+}
+
 # aliases for quickly opening project urls
 alias f-es-stg='firefox --new-tab http://k8s-staging-es-front.focobrasil.com.br'
 alias f-es-prod='firefox --new-tab http://www.educacaoemfoco.sedu.es.gov.br/login'
