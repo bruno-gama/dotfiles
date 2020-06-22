@@ -234,9 +234,10 @@ mode "$mode_screenshot" {
 bindsym Print mode "$mode_screenshot"
 
 # "Configure monitors" mode - selects display position presets
-set $mode_display Monitor layout - Work (w) Laptop (l) Mirror (m)
+set $mode_display Monitor layout - Work (w) Home (h) Laptop (l) Mirror (m)
 mode "$mode_display" {
   bindsym w exec "sh ~/.screenlayouts/work.sh", mode "default"
+  bindsym h exec "sh ~/.screenlayouts/home.sh", mode "default"
   bindsym l exec "sh ~/.screenlayouts/laptop.sh", mode "default"
   bindsym m exec "sh ~/.screenlayouts/mirror.sh", mode "default"
 
