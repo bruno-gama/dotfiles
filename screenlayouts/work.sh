@@ -8,6 +8,7 @@ xrandr
 # Now we actually set them
 xrandr --output HDMI-1 \
        --mode 1920x1080 \
+       --refresh 120 \
        --scale-from 1920x1080 \
        --pos 0x0 \
        --rotate normal \
