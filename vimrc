@@ -97,12 +97,6 @@ let g:ycm_semantic_triggers = {
 
 let g:ycm_show_diagnostics_ui = 0
 
-" LanguageClient options
-let g:LanguageClient_serverCommands = {
-\  'reason': ['ocaml-language-server', '--stdio'],
-\  'ocaml': ['ocaml-language-server', '--stdio'],
-\}
-
 " JSX in .js files
 let g:jsx_ext_required = 0
 
