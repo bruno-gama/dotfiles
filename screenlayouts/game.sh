@@ -7,6 +7,7 @@ xrandr
 
 # Now we actually set them
 xrandr --output HDMI-1 \
+       --primary \
        --mode 1920x1080 \
        --refresh 120 \
        --scale-from 1920x1080 \
@@ -14,7 +15,4 @@ xrandr --output HDMI-1 \
        --rotate normal \
        --set "Broadcast RGB" "Full" \
        --output eDP-1 \
-       --primary \
-       --mode 1366x768 \
-       --pos 0x1080 \
-       --rotate normal
+       --off 

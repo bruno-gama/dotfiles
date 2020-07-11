@@ -15,5 +15,6 @@ xrandr --output HDMI-1 \
        --set "Broadcast RGB" "Full" \
        --output eDP-1 \
        --primary \
+       --mode 1366x768 \
        --pos 540x1440 \
        --rotate normal
