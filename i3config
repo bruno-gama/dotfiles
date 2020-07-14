@@ -183,6 +183,7 @@ exec --no-startup-id SpiderOakONE # SpiderOak ONE
 exec compton -b --config ~/.config/compton/compton.conf # Enables window composition (opacity, transitions etc)
 exec --no-startup-id xss-lock ~/.config/i3/i3lock.sh # Automatically lock on suspend/screensaver
 exec --no-startup-id caffeine # Prevent suspend when fullscreen
+exec --no-startup-id redshift # Night light/f.lux thing
 
 # "Resize" mode resizes windows
 set $mode_resize Resize - hjkl or arrow keys to resize
