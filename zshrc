@@ -52,6 +52,10 @@ function cubo() {
   nmcli connection up $ID
 }
 
+function voudormir () {
+  vlc --play-and-exit $1 && systemctl poweroff -i
+}
+
 # aliases for quickly opening project urls
 alias f-es-stg='firefox --new-tab http://k8s-staging-es-front.focobrasil.com.br'
 alias f-es-prod='firefox --new-tab http://www.educacaoemfoco.sedu.es.gov.br/login'
