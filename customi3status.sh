@@ -12,8 +12,11 @@ do
   # Get number of unread mail in Mail INBOX folders
   unread="✉️ $(find ~/Mail/*/INBOX/new/* | wc -l) |"
 
+  # Figure out what is the currently open player program
+  possibleplayers="[ncspot|spotify]"
+  playername=$(playerctl -a metadata | cut -d " " -f 1 | grep "${possibleplayers}" | head -n 1)
+
   # Get song name and artist if player is open
-  playername="ncspot"
   playermessage=""
   playerstatus="$(playerctl status -p ${playername})"
   # Only if player is open
