@@ -13,13 +13,14 @@ do
   unread="✉️ $(find ~/Mail/*/INBOX/new/* | wc -l) |"
 
   # Get song name and artist if player is open
+  playername="ncspot"
   playermessage=""
-  playerstatus="$(playerctl status -p spotify)"
+  playerstatus="$(playerctl status -p ${playername})"
   # Only if player is open
   if [ "$playerstatus" = "Paused" ] || [ "$playerstatus" = "Playing" ]; then
     # Grab artist and song name from metadata
-    artist=$(playerctl -p spotify metadata xesam:albumArtist)
-    song=$(playerctl -p spotify metadata xesam:title)
+    artist=$(playerctl -p ${playername} metadata xesam:albumArtist)
+    song=$(playerctl -p ${playername} metadata xesam:title)
     # Format final output
     playermessage="$playerstatus: $artist - $song |"
   fi
