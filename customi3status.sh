@@ -18,8 +18,8 @@ do
   # Only if player is open
   if [ "$playerstatus" = "Paused" ] || [ "$playerstatus" = "Playing" ]; then
     # Grab artist and song name from metadata
-    artist=$(playerctl -p spotify metadata | grep xesam:albumArtist | sed -e "s/^\w\+\s\+\+\w\+:\w\+\s\+//g")
-    song=$(playerctl -p spotify metadata | grep xesam:title | sed -e "s/^\w\+\s\+\+\w\+:\w\+\s\+//g")
+    artist=$(playerctl -p spotify metadata xesam:albumArtist)
+    song=$(playerctl -p spotify metadata xesam:title)
     # Format final output
     playermessage="$playerstatus: $artist - $song |"
   fi
