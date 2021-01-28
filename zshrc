@@ -32,6 +32,7 @@ export EDITOR=vim
 alias vn='variety --next'
 alias :q='exit' # I'm tired of this
 alias :wq='exit' # and this too
+alias watchcpu='watch -n1 "cat /proc/cpuinfo | grep \"^[c]pu MHz\""'
 
 function dcr() {
   docker-compose run --rm --service-ports $1 $2
