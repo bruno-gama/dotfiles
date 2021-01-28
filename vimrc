@@ -10,7 +10,6 @@ Plugin 'VundleVim/Vundle.vim'
 
 " My Plugins
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'prettier/vim-prettier'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'posva/vim-vue'
@@ -65,17 +64,6 @@ let g:netrw_liststyle = 3
 
 " CtrlP options
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard'] " ignore files included in .gitignore
-
-" vim-prettier options
-let g:prettier#config#print_width = 80
-let g:prettier#config#tab_width = 2
-let g:prettier#config#semi = 'false'
-let g:prettier#config#single_quote = 'true'
-let g:prettier#config#trailing_comma = 'es5'
-let g:prettier#config#parser = 'flow'
-let g:prettier#config#config_precedence = 'prefer-file'
-let g:prettier#config#bracket_spacing = 'true'
-let g:prettier#config#jsx_bracket_same_line = 'false'
 
 " ALE options
 let g:ale_fixers = {
@@ -145,6 +133,7 @@ set nomodeline    "Don't get hacked'
 inoremap kj <Esc>
 inoremap jk <Esc>
 nnoremap <leader>l :ALELint<CR>
+nnoremap <leader>p :ALEFix<CR>
 nnoremap <leader>a :Ack!<Space>
 nnoremap <Space>f :VtrSendCommandToRunner yarn flow<CR>
 
