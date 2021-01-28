@@ -59,9 +59,9 @@ augroup myCmds
   autocmd VimEnter * silent !echo -ne "\e[2 q"
 augroup END
 
-" NERDTree options
+" Netrw options
 map <C-n> :Explore<CR>
-let NERDTreeShowHidden=1
+let g:netrw_liststyle = 3
 
 " CtrlP options
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard'] " ignore files included in .gitignore
