@@ -9,7 +9,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " My Plugins
-Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'prettier/vim-prettier'
 Plugin 'pangloss/vim-javascript'
@@ -61,7 +60,7 @@ augroup myCmds
 augroup END
 
 " NERDTree options
-map <C-n> :NERDTreeToggle<CR>
+map <C-n> :Explore<CR>
 let NERDTreeShowHidden=1
 
 " CtrlP options
