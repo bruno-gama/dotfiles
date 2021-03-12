@@ -84,8 +84,8 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # assigning default workspace monitors
-set $monitor_one "eDP-1"
-set $monitor_two "HDMI-1"
+set $monitor_one "HDMI-1-0"
+set $monitor_two "eDP-1"
 
 workspace 1 output $monitor_one
 workspace 2 output $monitor_one
@@ -235,8 +235,9 @@ mode "$mode_screenshot" {
 bindsym Print mode "$mode_screenshot"
 
 # "Configure monitors" mode - selects display position presets
-set $mode_display Monitor layout - Work (w) Home (h) Laptop (l) Mirror (m) Game (g)
+set $mode_display Monitor layout - Auto (a) Work (w) Home (h) Laptop (l) Mirror (m) Game (g)
 mode "$mode_display" {
+  bindsym a exec "sh ~/.screenlayouts/auto.sh", mode "default"
   bindsym w exec "sh ~/.screenlayouts/work.sh", mode "default"
   bindsym h exec "sh ~/.screenlayouts/home.sh", mode "default"
   bindsym l exec "sh ~/.screenlayouts/laptop.sh", mode "default"
