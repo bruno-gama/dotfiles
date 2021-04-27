@@ -98,6 +98,8 @@ endif
 
 " Vim-tmux-runner options
 let g:VtrPrompt = '👉 '
+let g:VtrOrientation = 'h'
+let g:VtrPercentage = 40
 nnoremap <Space>o :VtrOpenRunner<CR>
 nnoremap <Space>x :VtrKillRunner<CR>
 nnoremap <Space>r :VtrSendCommandToRunner<Space>
