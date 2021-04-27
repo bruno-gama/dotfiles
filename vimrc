@@ -67,14 +67,19 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 " ALE options
 let g:ale_fixers = {
 \  'javascript': ['prettier', 'eslint'],
+\  'typescript': ['eslint', 'tslint'],
+\  'json': ['eslint'],
+\  'ruby': ['rubocop'],
 \}
 
 " ALE options
 let g:ale_linters = {
 \  'javascript': ['eslint', 'flow'],
+\  'ruby': ['rubocop'],
 \}
 
 let g:ale_javascript_prettier_use_local_config = 1
+let g:ale_linters_explicit = 1
 
 " YouCompleteMe options
 let g:ycm_semantic_triggers = {
