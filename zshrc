@@ -54,7 +54,7 @@ function cubo() {
 }
 
 function voudormir () {
-  vlc --play-and-exit $1 && systemctl poweroff -i
+  vlc --play-and-exit $1 && systemctl suspend
 }
 
 # aliases for quickly opening project urls
