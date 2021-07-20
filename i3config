@@ -5,7 +5,7 @@
 set $mod Mod4
 
 # Grab the system's default monospace font for everything
-font pango:monospace 8
+font pango:monospace 11
 
 # Color scheme: Solarized
 set $base03 #002b36
@@ -156,7 +156,7 @@ client.placeholder      $base03 $base03 $base01 $cyan     $base03
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-  status_command "sh ~/.config/i3status/customi3status.sh"
+  status_command i3blocks
   position top
 
   # Basically solarized-dark
