@@ -1,0 +1,18 @@
+#!/bin/bash
+
+possibleplayers="ncspot\|spotify"
+playername=$(playerctl -a metadata | cut -d " " -f 1 | grep "${possibleplayers}" | head -n 1)
+
+# Get song name and artist if player is open
+playermessage=""
+playerstatus="$(playerctl status -p ${playername})"
+# Only if player is open
+if [ "$playerstatus" = "Paused" ] || [ "$playerstatus" = "Playing" ]; then
+  # Grab artist and song name from metadata
+  artist=$(playerctl -p ${playername} metadata xesam:albumArtist)
+  song=$(playerctl -p ${playername} metadata xesam:title)
+  # Format final output
+  playermessage="$playerstatus: $artist - $song"
+fi
+
+echo $playermessage || exit 1

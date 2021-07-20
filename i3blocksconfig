@@ -1,0 +1,23 @@
+[mail]
+command=echo "✉️ $(find ~/Mail/*/INBOX/new/* | wc -l)"
+interval=60
+
+[spotify]
+command=bash ~/.config/i3blocks/scripts/spotify
+interval=1
+
+[cpu-temp]
+command=bash ~/.config/i3blocks/scripts/cputemp
+interval=2
+
+[gpu-temp]
+command=bash ~/.config/i3blocks/scripts/gputemp
+interval=2
+
+[volume]
+command=echo "🔊 $(pamixer --get-volume)"
+interval=1
+
+[datetime]
+command=date +"%Y-%m-%d %H:%M"
+interval=1
