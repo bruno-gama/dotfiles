@@ -19,7 +19,8 @@ sudo pacman -S gvim \
                dmenu \
                gnome-terminal \
                pamixer \
-               nvtop
+               nvtop \
+               redshift
 
 yay -S spideroak-one
 
