@@ -7,16 +7,24 @@ command=bash ~/.config/i3blocks/scripts/spotify
 interval=1
 
 [cpu-temp]
+label=CPU: 
 command=bash ~/.config/i3blocks/scripts/cputemp
 interval=2
 
 [gpu-temp]
+label=GPU: 
 command=bash ~/.config/i3blocks/scripts/gputemp
 interval=2
 
 [volume]
 command=echo "🔊 $(pamixer --get-volume)"
 interval=1
+
+[battery]
+command=bash ~/.config/i3blocks/scripts/battery
+interval=30
+label=⚡ 
+BAT_NUMBER=1
 
 [datetime]
 command=date +"%Y-%m-%d %H:%M"
