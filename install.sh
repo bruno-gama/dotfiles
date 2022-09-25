@@ -41,7 +41,7 @@ mkdir  ~/.config/i3blocks
 ln -sf ~/projects/personal/dotfiles/i3config ~/.config/i3/config
 ln -sf ~/projects/personal/dotfiles/i3lock.sh ~/.config/i3/i3lock.sh
 ln -sf ~/projects/personal/dotfiles/i3blocksconfig ~/.config/i3blocks/config
-ln -sf ~/projects/personal/dotfiles ~/.config/i3blocks/scripts
+ln -sf ~/projects/personal/dotfiles/i3blocks-scripts ~/.config/i3blocks/scripts
 ln -sf ~/projects/personal/dotfiles/tmux.conf ~/.tmux.conf
 ln -sf ~/projects/personal/dotfiles/tmux.conf.local ~/.tmux.conf.local
 ln -sf ~/projects/personal/dotfiles/vimrc ~/.vimrc
