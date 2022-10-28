@@ -42,35 +42,6 @@ function megareplace() {
   ag -rl $1 $3 | xargs sed -i -E s/$1/$2/g
 }
 
-function cubo() {
-  ID=`nmcli -t --fields uuid,device connection show --active |\
-      grep wlan0 |\
-      awk -F ':' '{print $1}'`
-  echo "Active connection UUID is $ID"
-  echo "Deactivating connection..."
-  nmcli connection down $ID
-  echo "Reactivating connection..."
-  nmcli connection up $ID
-}
-
-function voudormir () {
-  vlc --play-and-exit $1 && systemctl suspend
-}
-
-# aliases for quickly opening project urls
-alias f-es-stg='firefox --new-tab http://k8s-staging-es-front.focobrasil.com.br'
-alias f-es-prod='firefox --new-tab http://www.educacaoemfoco.sedu.es.gov.br/login'
-alias f-ms-stg='firefox --new-tab http://k8s-staging-ms-front.focobrasil.com.br'
-alias f-ms-prod='firefox --new-tab http://www.foconoestudante.com.br'
-alias f-pa-stg='firefox --new-tab http://k8s-staging-pa-front.focobrasil.com.br'
-alias f-pa-prod='firefox --new-tab http://www.focopedagogico.com.br'
-alias f-pb-stg='firefox --new-tab http://k8s-staging-pb-front.focobrasil.com.br'
-alias f-pb-prod='firefox --new-tab http://www.aprendizagememfoco.com.br'
-alias f-pe-stg='firefox --new-tab http://k8s-staging-pe-front.focobrasil.com.br'
-alias f-pe-prod='firefox --new-tab http://www.focoeducacaope.com.br/login'
-alias f-pi-stg='firefox --new-tab http://k8s-staging-pi-front.focobrasil.com.br'
-alias f-pi-prod='firefox --new-tab http://www.focoaprendizagempi.com.br'
-
 # set readline mode to vim
 set -o vi
 
