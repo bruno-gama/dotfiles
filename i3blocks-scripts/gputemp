@@ -1,3 +1,6 @@
 #!/bin/bash
 
-echo "GPU: $(nvidia-smi -q | grep 'GPU Current Temp' | awk -F: '{ print $2 }' | awk '{ gsub(/^[ \t]+|[ \t]+$/, ""); print }')"
+sensors | grep junction: \
+        | awk -F: '{ print $2 }' \
+        | awk '{ gsub(/\(.+\)/, ""); print }' \
+        | awk '{ gsub(/^[ \t]+|[ \t]+$/, ""); print }'

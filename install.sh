@@ -21,7 +21,8 @@ sudo pacman -S gvim \
                pamixer \
                nvtop \
                redshift \
-               zsh
+               zsh \
+               dunst
 
 yay -S spideroak-one
 

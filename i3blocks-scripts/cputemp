@@ -1,3 +1,5 @@
 #!/bin/bash
 
-echo "CPU: $(sensors | grep Tdie | awk -F: '{ print $2 }' | awk '{ gsub(/^[ \t]+|[ \t]+$/, ""); print }')"
+sensors | grep Tctl \
+        | awk -F: '{ print $2 }' \
+        | awk '{ gsub(/^[ \t]+|[ \t]+$/, ""); print }'
