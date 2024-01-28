@@ -85,7 +85,7 @@ bindsym $mod+a focus parent
 
 # assigning default workspace monitors
 set $monitor_one "HDMI-1-0"
-set $monitor_two "eDP1"
+set $monitor_two "eDP-1"
 
 workspace 1 output $monitor_one
 workspace 2 output $monitor_one

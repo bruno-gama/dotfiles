@@ -8,6 +8,5 @@ xrandr
 # Now we actually set them
 xrandr --output eDP-1 \
        --primary \
-       --output HDMI-1 \
-       --set "Broadcast RGB" "Full" \
+       --output HDMI-1-0 \
        --same-as eDP-1

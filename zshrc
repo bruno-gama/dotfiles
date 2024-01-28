@@ -42,6 +42,16 @@ function megareplace() {
   ag -rl $1 $3 | xargs sed -i -E s/$1/$2/g
 }
 
+function focoapi_reset() {
+rails db:drop db:create db:migrate
+RAILS_ENV=test rails db:drop db:create db:migrate
+DB=warehouse rails db:create db:schema:load
+rails authorization:create_service authorization:create_feature_resources
+rails sample_data:load_all
+rails db:seed
+rails tct:refresh_views views_refresh
+}
+
 # set readline mode to vim
 set -o vi
 
